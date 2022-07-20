@@ -5,21 +5,36 @@ local indent = 4
 
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
-utils.opt('b', 'expandtab', true)
-utils.opt('b', 'shiftwidth', indent)
-utils.opt('b', 'smartindent', true)
-utils.opt('b', 'tabstop', indent)
-utils.opt('o', 'hidden', true)
-utils.opt('o', 'ignorecase', true)
-utils.opt('o', 'scrolloff', 4 )
-utils.opt('o', 'shiftround', true)
-utils.opt('o', 'smartcase', true)
-utils.opt('o', 'splitbelow', true)
-utils.opt('o', 'splitright', true)
-utils.opt('o', 'wildmode', 'list:longest')
+cmd 'colorscheme gruvbox'
+-- vim.opt noswapfile = true
+
+
+utils.opt('o', 'mouse', 'a')
+utils.opt('o', 'clipboard', 'unnamedplus')
+utils.opt('o', 'encoding', 'utf-8')
+
 utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
-utils.opt('o', 'clipboard','unnamed,unnamedplus')
+utils.opt('w', 'scrolloff', 7)
+utils.opt('w', 'cursorline', true)
 
--- Highlight on yank
-vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+utils.opt('b', 'tabstop', indent)
+utils.opt('b', 'softtabstop', indent)
+utils.opt('b', 'shiftwidth', indent)
+utils.opt('b', 'expandtab', true)
+utils.opt('b', 'smartindent', true)
+utils.opt('b', 'fileformat', 'unix')
+
+utils.opt('o', 'splitright', true)
+utils.opt('o', 'splitbelow', true)
+utils.opt('o', 'incsearch', true)
+utils.opt('o', 'diffopt', 'vertical')
+utils.opt('o', 'foldmethod', 'indent')
+utils.opt('o', 'foldlevelstart', 1)
+-- utils.opt('o', 'noendofline', 1)
+
+utils.opt('o', 'path', '**')
+utils.opt('o', 'wildmenu', true)
+
+utils.opt('o', 'langmap', "ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>")
+
