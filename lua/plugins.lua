@@ -18,11 +18,12 @@ return require('packer').startup(function(use)
     use {'hrsh7th/cmp-nvim-lsp'}
     use {'saadparwaiz1/cmp_luasnip'}
     use {'L3MON4D3/LuaSnip'}
+    use {'nvim-lua/plenary.nvim'}
 
     -- Для дебагов, точки остановки
     use {'mfussenegger/nvim-dap'}
     use {'mfussenegger/nvim-dap-python'}
-    use {'rcarriga/nvim-dap-ui'}
+    use {'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap"} }
     -- Для работы с git
     -- https://github.com/lewis6991/gitsigns.nvim
     use {'nvim-lua/plenary.nvim'}
@@ -36,7 +37,7 @@ return require('packer').startup(function(use)
     --use {'preservim/nerdtree'}
     use {'francoiscabrol/ranger.vim'}
     use {'rbgrouleff/bclose.vim'}
-    use {'tpope/vim-surround'}
+    use {'kylechui/nvim-surround'}
     use {'easymotion/vim-easymotion'}
 
     -- color schemas
@@ -51,6 +52,11 @@ return require('packer').startup(function(use)
 
     -- python pep8 indent
     use {'Vimjas/vim-python-pep8-indent'}
+
+    -- Поиск по файлам
+    use {'nvim-telescope/telescope.nvim',  tag = '0.1.0' }
+    use {'nvim-telescope/telescope-fzf-native.nvim',  run = 'make' }
+    
 
 
   if packer_bootstrap then
